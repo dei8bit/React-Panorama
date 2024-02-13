@@ -1,0 +1,20 @@
+<!--# REACT VIA CDN -->
+<!--+ Esta es la manera mas sencilla y practica de empezar a probar lo escencial de REACT, por supuesto solo para probarlo!!-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!--+ CDN recomendado para desarrollo: https://es.reactjs.org/docs/cdn-links.html -->
+    <script crossorigin src="https://unpkg.com/react@17/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"></script>
+</head>
+<body>
+    <div id="root"></div>
+    <script>
+        const h1 = React.createElement("h1", null, "Hola Mundo!");
+        ReactDOM.render(h1, document.getElementById('root'));
+    </script>
+</body>
+</html>
+
+<!--* En este ejemplo estamos usando React directamente en el HTML, normalmente lo tendriamos en archivos externos -->

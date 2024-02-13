@@ -1,0 +1,10 @@
+/*# ESTILOS EN REACT */
+/*+ Para trabajar con estilos en react simplemente los aplicamos al contenedor principal (por default main) o a cada componente individual */
+/* body{
+  background-color: rgb(252, 252, 252);
+  color: salmon;
+  font-size: 24px;
+} */
+
+/*+ estos estilos estaran importados en el componente main.jsx */
+/** Estos estilos sobreescribiran todos los estilos que tengan los componentes individuales!!! */
