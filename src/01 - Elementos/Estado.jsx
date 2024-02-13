@@ -20,13 +20,13 @@ import { useState } from "react";
 export function Contador() {
   const [valor, actualizarValor] = useState(0);
 
-    return (
-        <div>
-            <h1>{valor}</h1>
-            <button onClick={() => actualizarValor(valor -1)}>Restarle 1</button>
-            <button onClick={() => actualizarValor(valor + 1)}>Sumarle 1</button>
-        </div>
-    );
+  return (
+    <div>
+      <h1>{valor}</h1>
+      <button onClick={() => actualizarValor(valor - 1)}>Restarle 1</button>
+      <button onClick={() => actualizarValor(valor + 1)}>Sumarle 1</button>
+    </div>
+  );
 }
 
 //$ Varios Estados en varios un Componente:
@@ -80,7 +80,7 @@ function Estado2() {
 }
 /// Como se puede observar los nombres de la funcion useState no necesitan ser unicos, puesto que viven dentro de la funcion.
 
-export  function Contadores() {
+export function Contadores() {
   return (
     <>
       <Estado1 />
@@ -92,8 +92,8 @@ export  function Contadores() {
 //$ Estado inicial pasado como props:
 //+ Es un standard llamar a esta prop con el prefijo "initial"... 
 
-export const EstadoComoProp = ({textoInicial}) => {
-  const [texto] = useState(textoInicial)  
+export const EstadoComoProp = ({ textoInicial }) => {
+  const [texto] = useState(textoInicial)
   return (
     <div>{texto}</div>
   )

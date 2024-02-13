@@ -52,5 +52,3 @@
 //+ los fragmentos permiten agrupar elementos sin hacer uso de un nodo que los envuelva. 
 //+ Esto estaria reemplazando al tag del createElement
 //- SINTAXIS:--> React.Fragment
-
-

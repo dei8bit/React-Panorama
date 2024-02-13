@@ -2,7 +2,7 @@
 //+ Los formularios son un aspecto importante en toda pagina web.
 //+ Estos se pueden hacer con SOLO HTML, con HTML y JS y tambien con REACT.
 
-import { useState,Component } from "react";
+import { useState, Component } from "react";
 
 //.input:
 //+ Los formularios contienen campos, que se representan generalmente con elementos inputs, los cuales tienen varios tipos.
@@ -51,7 +51,7 @@ export function InputConEstado() {
 
 //.Formularios:
 
-export  function Formulario() {
+export function Formulario() {
   const [nombre, cambiarNombre] = useState("");
   const [apellido, cambiarapellido] = useState("");
 

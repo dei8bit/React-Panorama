@@ -68,8 +68,8 @@ function Titulos() {
 export default function Componentes() {
   return (
     <>
-      <Titulos/>
-      <Titulos/>
+      <Titulos />
+      <Titulos />
     </>
   )
 }
@@ -79,14 +79,14 @@ export default function Componentes() {
 //• Estilos en linea: Una "mala practica", pero funciona, deben ingresarse como un objeto entre llaves {}
 //- SINTAXIS:--> <tag style={{atributo1: "valor1",..., atributoN°: "valorN°"}}>...</tag> (observese las llaves dobles {{}} )
 //• Mediante clases o Selectores en archivos CSS externos
-//- SINTAXIS:--> <tag className='...'>...</tag> 
+//- SINTAXIS:--> <tag className='...'>...</tag>
 //* Es importante usar clases para cada elemento y no seleccionarlos directamente por etiqeuta para evitar sobreescrituras!!
 //* Es importante establecer las separaciones de varios componentes en un elemento padre y no en los componentes aislados!!
 
 //+ La forma de usar variables dinamicas en atributos es mediante template strings:
 
 //$ forma incorrecta:
-// <img src="http://blogs/{usuarios}" /> 
+// <img src="http://blogs/{usuarios}" />
 
 //$ forma correcta:
 // const url = `http://blogs/${usuarios}`;

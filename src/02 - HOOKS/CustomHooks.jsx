@@ -47,7 +47,7 @@ export default function CustomHooks() {
 }
 
 
-//_Ejemplo 2 
+//_Ejemplo 2
 // import { useState } from 'react';
 
 // const useStyle = () => {

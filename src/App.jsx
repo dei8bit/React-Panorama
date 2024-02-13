@@ -1,8 +1,8 @@
-import CssModules from "./CSS MODULES/CssModules";
 //# ELEMENTOS:
-// import SintaxisJSX from './Elementos/SintaxisJSX'
-// import Componentes from './Elementos/Componentes'
+import SintaxisJSX from './Elementos/SintaxisJSX'
+import Componentes from './Elementos/Componentes'
 
+//_ props:
 import {
   Numeros,
   Texto,
@@ -19,9 +19,13 @@ import {
   ObjetoComoProp,
 } from "./Elementos/Props";
 
+//_ eventos:
 import Eventos from "./Elementos/Eventos";
+
+//_ estado:
 import { Contador, Contadores, EstadoComoProp } from "./Elementos/Estado";
 
+//_ condicionales:
 import {
   IF_True,
   IF_False,
@@ -33,6 +37,7 @@ import {
   Autorizacion2,
 } from "./Elementos/Condicionales";
 
+//_ formularios:
 import {
   Input,
   InputConEstado,
@@ -41,6 +46,7 @@ import {
   FormularioClase,
 } from "./Elementos/Formularios";
 
+//_ listas:
 import {
   ListaFor,
   ListaForIn,
@@ -53,16 +59,32 @@ import {
   ListRemove,
 } from "./Elementos/Listas";
 
-// import CiclosDeVida from './Elementos/CiclosDeVida'
-// import PasoDeEstado from './Elementos/PasoDeEstado'
-// import Composicion from './Elementos/Composicion'
+//_ ciclos de vida:
+import CiclosDeVida from './Elementos/CiclosDeVida'
+
+//_ paso de estado:
+import PasoDeEstado from './Elementos/PasoDeEstado'
+
+//_ composicion:
+import Composicion from './Elementos/Composicion'
+
 
 //# MULTIMEDIA:
 // import Imagen from "./multimedia/Imagenes";
 
 //# HOOKS:
+import UseEffect from "./HOOKS/UseEffect";
+import UseRef from "./HOOKS/UseRef";
+import UseState from "./HOOKS/UseState";
+import UnContexto from "./HOOKS/useContext/UnContexto";
+import VariosContextos from "./HOOKS/useContext/VariosContextos";
+import UseReducer from "./HOOKS/UseReducer";
+import UseCallback from "./HOOKS/UseCallback";
+import UseMemo from "./HOOKS/UseMemo";
+import CustomHooks from "./HOOKS/CustomHooks";
 
-//# PRACTICA:
+
+//$ Practica props:
 
 const devuelveTexto = () => "texto";
 const mayuscula = (texto) => texto.toUpperCase();
@@ -99,16 +121,6 @@ const objetoConProps = {
   peso: "26Kg",
 };
 
-//# HOOKS:
-import UseEffect from "./HOOKS/UseEffect";
-import UseRef from "./HOOKS/UseRef";
-import UseState from "./HOOKS/UseState";
-import UnContexto from "./HOOKS/useContext/UnContexto";
-import VariosContextos from "./HOOKS/useContext/VariosContextos";
-import UseReducer from "./HOOKS/UseReducer";
-import UseCallback from "./HOOKS/UseCallback";
-import UseMemo from "./HOOKS/UseMemo";
-import CustomHooks from "./HOOKS/CustomHooks";
 
 export default function App() {
   return (
@@ -148,8 +160,6 @@ export default function App() {
       {/* <ComponentePadre/> */}
 
       {/* <ObjetoComoProp {...objetoConProps} /> */}
-
-      {/*//_ Conceptos avanzados(?): --- */}
 
       {/* <Eventos/> */}
 
@@ -201,7 +211,7 @@ export default function App() {
       {/* <UseReducer/> */}
       {/* <UseCallback/> */}
       {/* <UseMemo/> */}
-      <CustomHooks/>
+      <CustomHooks />
     </>
   );
 }

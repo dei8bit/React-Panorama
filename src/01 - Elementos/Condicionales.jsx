@@ -78,50 +78,50 @@ export function CondicionalAND({ condicion }) {
 
 //$ Ejemplo 1:
 
-export  function Autorizacion1() {
+export function Autorizacion1() {
   const [autoridad, darAutorizacion] = useState("indefinido");
 
   return (
-      <div>
-          <h2>Usted esta: {autoridad}</h2>
-          <button onClick={() => darAutorizacion("autorizado")}>Autorizar</button>
-          <button onClick={() => darAutorizacion("desautorizado")}>Desautorizar</button>
-      </div>
+    <div>
+      <h2>Usted esta: {autoridad}</h2>
+      <button onClick={() => darAutorizacion("autorizado")}>Autorizar</button>
+      <button onClick={() => darAutorizacion("desautorizado")}>Desautorizar</button>
+    </div>
   );
 }
 
 // $ Ejemplo 2:
 
-export  function Autorizacion2() {
+export function Autorizacion2() {
   const [autoridad, darAutorizacion] = useState(false);
 
   return (
-      <div>
-          <h2>Usted esta: {autoridad?"autorizado":"desautorizado"}</h2>
-          <button onClick={() => darAutorizacion(true)}>Autorizar</button>
-          <button onClick={() => darAutorizacion(false)}>Desautorizar</button>
-      </div>
+    <div>
+      <h2>Usted esta: {autoridad ? "autorizado" : "desautorizado"}</h2>
+      <button onClick={() => darAutorizacion(true)}>Autorizar</button>
+      <button onClick={() => darAutorizacion(false)}>Desautorizar</button>
+    </div>
   );
 }
 
 
 //$ Ejemplo 3:
 
-export const RenderCondicional = ({texto1,texto2}) => {
-  const [valor,setValor] = useState("inicial")
-  const renderizarInput = ({target}) => {
+export const RenderCondicional = ({ texto1, texto2 }) => {
+  const [valor, setValor] = useState("inicial")
+  const renderizarInput = ({ target }) => {
     setValor(target.value);
-      };     
-        const condicion1 = valor === texto1;
-        const condicion2 = valor === texto2;
-      
+  };
+  const condicion1 = valor === texto1;
+  const condicion2 = valor === texto2;
+
 
   return (
     <div>
       <h3>Escriba Alguno de los textos en pantalla:</h3>
       <p><b>{texto1}</b></p>
       <p><b>{texto2}</b></p>
-      <input type="text"  onChange={renderizarInput} value={valor}/>
+      <input type="text" onChange={renderizarInput} value={valor} />
       {condicion1 && <p>CORRECTO</p>}
       {condicion2 && <p>CORRECTO</p>}
     </div>

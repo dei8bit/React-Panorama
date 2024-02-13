@@ -8,20 +8,20 @@
 //. Definir propiedades
 //+ Definimos las propiedades de un componente en la definicion del mismo.
 
-/// SIN DESESTRUCTURACION:
+//• SIN DESESTRUCTURACION:
 //- SINTAXIS Componente funcional: --> function Name(props){return props.propiedad}
 //- SINTAXIS Componente de clase:  --> class Name extends React.Component {render(){return <>...{this.props.propiedad}...</>;}}
 
-/// CON DESESTRUCTURACION:
+//• CON DESESTRUCTURACION:
 //- SINTAXIS Componente funcional: --> function Name({propiedad}){return {propiedad}}
 //- SINTAXIS Componente de clase:  --> class Name extends React.Component {render(){const { propiedad } = this.props; return  <>...{propiedad}...</>;}}
 
 //$ Ejemplos :
-/// COMPONENTES FUNCIONAL:
+//• COMPONENTES FUNCIONAL:
 // export default function Saludo(props) {return <h1>Hola {props.propiedad}</h1>;}
 // export default function Saludo({propiedad}) {return <h1>Hola {propiedad}</h1>;}
 
-/// COMPONENTES DE CLASE:
+//• COMPONENTES DE CLASE:
 // class  Saludo extends React.Component{render(){return <h1> Hola {this.props.nombre}</h1>;}}
 // class  Saludo extends React.Component{render(){const {nombre} = this.props return <h1>Hola {nombre}</h1>;}}
 
@@ -192,7 +192,7 @@ export function Contenedor(props) {
 
 //$ Ejemplo 2:
 
-function MiComponente({children}) {
+function MiComponente({ children }) {
   return (
     <div
       style={{

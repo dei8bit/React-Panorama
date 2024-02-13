@@ -42,7 +42,7 @@ export default function UnContexto() {
     <contextoEnvoltorio.Provider value={user}>
       <button onClick={cambiaLogin}>CAMBIA LOGIN</button>
       <div>
-        <Hijo/>
+        <Hijo />
       </div>
     </contextoEnvoltorio.Provider>
   );

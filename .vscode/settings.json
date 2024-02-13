@@ -1,0 +1,124 @@
+{
+  "better-comments.tags": [
+    {
+      //#comentario TITULAR
+      "tag": "#",
+      "color": "#E8DFCA",
+      "strikethrough": false,
+      "underline": true,
+      "backgroundColor": "#7895B2",
+      "bold": true,
+      "italic": false
+    },
+    {
+      //.comentario para subtitulo 1
+      "tag": ".",
+      "color": "#0A1714",
+      "strikethrough": false,
+      "underline": true,
+      "backgroundColor": "#B6F57F",
+      "bold": true,
+      "italic": true
+    },
+    {
+      //,comentario para subtitulo 2
+      "tag": ",",
+      "color": "#0fdb8d",
+      "strikethrough": false,
+      "underline": false,
+      "backgroundColor": "#580cc2",
+      "bold": true,
+      "italic": false
+    },
+    {
+      //$comentario para subtitulo 3
+      "tag": "$",
+      "color": "#262e2b",
+      "strikethrough": false,
+      "underline": false,
+      "backgroundColor": "#FFACC7",
+      "bold": true,
+      "italic": true
+    },
+    {
+      //_comentario Para ejemplos
+      "tag": "_",
+      "color": "#d66127",
+      "strikethrough": false,
+      "underline": true,
+      "backgroundColor": "#dade8c",
+      "bold": true,
+      "italic": true
+    },
+    {
+      //*comentario IMPORTANTE !!!
+      "tag": "*",
+      "color": "#FF8C00",
+      "strikethrough": false,
+      "underline": false,
+      "backgroundColor": "transparent",
+      "bold": true,
+      "italic": false
+    },
+    {
+      //+ comentario 1
+      "tag": "+",
+      "color": "#E0BB20",
+      "strikethrough": false,
+      "underline": false,
+      "backgroundColor": "transparent",
+      "bold": false,
+      "italic": false
+    },
+    {
+      //- comentario 2
+      "tag": "-",
+      "color": "#A7FFE4",
+      "strikethrough": false,
+      "underline": false,
+      "backgroundColor": "transparent",
+      "bold": false,
+      "italic": false
+    },
+    {
+      ///comentario para outputs
+      "tag": "/",
+      "color": "#c4c4a5",
+      "strikethrough": false,
+      "underline": false,
+      "backgroundColor": "transparent",
+      "bold": false,
+      "italic": true
+    },
+    {
+      //•comentario de lista
+      "tag": "•",
+      "color": "#69db0b",
+      "strikethrough": false,
+      "underline": false,
+      "backgroundColor": "transparent",
+      "bold": false,
+      "italic": true
+    },
+    {
+      //i!comentario informativo
+      "tag": "i!",
+      "color": "#4287f5",
+      "strikethrough": false,
+      "underline": false,
+      "backgroundColor": "transparent",
+      "bold": false,
+      "italic": true
+    },
+    {
+      //: comentario personal
+      "tag": ":",
+      "color": "#b134eb",
+      "strikethrough": false,
+      "underline": false,
+      "backgroundColor": "transparent",
+      "bold": false,
+      "italic": false
+    }
+  ]
+}

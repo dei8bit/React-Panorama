@@ -4,7 +4,7 @@
 //+ Es importante usarlo con prudencia, debido a que no todos los componentes ameritan su uso.
 //+ una forma de saber cuando usarlo es cuando NECESITAMOs que nuestro componente NO vuelva a crear una funcion nuevamente.
 
-//i! La diferencia entre useCallback y useMemo es que:p
+//i! La diferencia entre useCallback y useMemo es que:
 //• useCallback devuelve LA FUNCION
 //• useMemo devuelve EL VALOR DEL RETORNO DE LA FUNCION.
 

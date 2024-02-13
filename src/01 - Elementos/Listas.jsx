@@ -10,12 +10,12 @@
 //* Elegir incorrectamente la key del componente ocasionara problemas de rendimiento!!
 //* Cada elemento de la lista debe tener una key con un valor unico, pasado como prop!!
 //* No es recomendable usar valores aleatorios ni indices en las keys!!.
-  //* valores aleatorios: Igualmente, no generes keys sobre la marcha, p. ej. con key={Math.random()}. Esto hará que las keys nunca coincidan entre renderizados, llevando a todos tus componentes y al DOM a recrearse cada vez. 
-  //* indices: Podrías estar tentado a usar el índice del elemento en el array como su key. De hecho, eso es lo que React usará si tu no especifícas una key en absoluto. Pero el orden en el que renderizas elementos cambiará con el tiempo si un elemento es insertado, borrado, o si se reordena su array. El índice como key lleva a menudo a sutiles y confusos errores.
+//* valores aleatorios: Igualmente, no generes keys sobre la marcha, p. ej. con key={Math.random()}. Esto hará que las keys nunca coincidan entre renderizados, llevando a todos tus componentes y al DOM a recrearse cada vez. 
+//* indices: Podrías estar tentado a usar el índice del elemento en el array como su key. De hecho, eso es lo que React usará si tu no especifícas una key en absoluto. Pero el orden en el que renderizas elementos cambiará con el tiempo si un elemento es insertado, borrado, o si se reordena su array. El índice como key lleva a menudo a sutiles y confusos errores.
 
 //_ REGLAS DE LAS KEYS:
-  //• Las keys tienen que ser únicas entre elementos hermanos. Sin embargo, está bien usar las mismas keys para nodos JSX en arrays diferentes.
-  //• Las keys no tienen que cambiar o ¡eso quitará su propósito! No las generes mientras renderizas.
+//• Las keys tienen que ser únicas entre elementos hermanos. Sin embargo, está bien usar las mismas keys para nodos JSX en arrays diferentes.
+//• Las keys no tienen que cambiar o ¡eso quitará su propósito! No las generes mientras renderizas.
 
 import { useState } from "react";
 
@@ -34,40 +34,40 @@ export function ListaFor() {
 
 //$ Listas con bucle for in:
 
-export  function ListaForIn() {
+export function ListaForIn() {
   const usuario = {
     nombre: 'Mariano',
     edad: 77,
     cargo: 'Presidente'
   };
-    const userDetails = [];
+  const userDetails = [];
 
-    for (const key in usuario) {
-      userDetails.push(
-        <p key={key}>
-          <b>{key}:</b> {usuario[key]}
-        </p>
-      );
-    }
-    return <div>{userDetails}</div>
+  for (const key in usuario) {
+    userDetails.push(
+      <p key={key}>
+        <b>{key}:</b> {usuario[key]}
+      </p>
+    );
+  }
+  return <div>{userDetails}</div>
 }
 
 
 
 //$ Listas con bucle for of:
 
-export  function ListaForOf() {
+export function ListaForOf() {
   const corazones = ['💛', '🧡', '💚', '💙'];
-    const corazonesLista = [];
-    for (const corazon of corazones) {
-      corazonesLista.push(<li key={corazon}>{corazon}</li>);
-    }
-    return <ul>{corazonesLista}</ul>;
+  const corazonesLista = [];
+  for (const corazon of corazones) {
+    corazonesLista.push(<li key={corazon}>{corazon}</li>);
+  }
+  return <ul>{corazonesLista}</ul>;
 }
 
 //$ Listas con bucle map:
 
-export  function ListaMap() {
+export function ListaMap() {
   const lista = ["Silicon Valley", "Mr. Robot", "Black Mirror"];
   return (
     <ul>
@@ -112,7 +112,7 @@ const libros = ["La Guerra y la paz", "Un mundo feliz", "El Principito"];
 const peliculas = ["Matrix", "La Naranja Mecanica", "Amelie"];
 const comidas = ["Suri ", "Cuy ", "haggis"];
 
-function Listado({listado}) {
+function Listado({ listado }) {
   return (
     <ul>
       {listado.map((item) => (
@@ -122,15 +122,15 @@ function Listado({listado}) {
   );
 }
 
-export  function Libros() {
+export function Libros() {
   return (
     <div>
       <h1>libros</h1>
-      <Listado listado={libros}/>
+      <Listado listado={libros} />
       <h1>peliculas</h1>
-      <Listado listado={peliculas}/>
+      <Listado listado={peliculas} />
       <h1>comidas</h1>
-      <Listado listado={comidas}/>
+      <Listado listado={comidas} />
     </div>
   )
 }
@@ -143,14 +143,14 @@ const librosIniciales = ["La Guerra y la paz", "Un mundo feliz", "El Principito"
 function ListadoDeLibro({ listado }) {
   return (
     <ul>
-      {listado.map((item,index) => (
+      {listado.map((item, index) => (
         <li key={index}>{item}</li>
       ))}
     </ul>
   );
 }
 
-export  function LibrosFijos() {
+export function LibrosFijos() {
   const [libro, agregarLibro] = useState(librosIniciales);
 
   const manejarClick = () => {
@@ -184,7 +184,7 @@ function ListadoDeElementos({ listado }) {
   );
 }
 
-export  function ListaDinamicas() {
+export function ListaDinamicas() {
   const [libro, agregarLibro] = useState(librosDefault);
   const [inputValue, setInputValue] = useState(""); // Agrega estado para el valor del input
 
@@ -216,7 +216,7 @@ export  function ListaDinamicas() {
 
 const peliculasInicial = ["Matrix", "La Naranja Mecanica", "Amelie"];
 const comidasInicial = ["Suri ", "Cuy ", "haggis"];
-const librosInicial = ["La Guerra y la paz","Un mundo feliz","El Principito",];
+const librosInicial = ["La Guerra y la paz", "Un mundo feliz", "El Principito",];
 
 function Lista({ listado }) {
   return (
@@ -228,7 +228,7 @@ function Lista({ listado }) {
   );
 }
 
-export  function ListasDinamicas() {
+export function ListasDinamicas() {
 
   const [libro, agregarLibro] = useState(librosInicial);
   const [pelicula, agregarPelicula] = useState(peliculasInicial);
@@ -304,7 +304,7 @@ export function ListasDinamicas2() {
 
   const masElemento = (tipo) => {
     if (inputValue.trim() !== "") {
-      agregarElemento({...elementos,[tipo]: [...elementos[tipo], inputValue]});
+      agregarElemento({ ...elementos, [tipo]: [...elementos[tipo], inputValue] });
       setInputValue(""); // Limpia el input
     }
   };
@@ -342,22 +342,22 @@ const initialItems = [
 
 function Items({ listado }) {
   return (
-    
+
     <ul>
       {
-      listado.map((item, index) => (
-        <div cl>
-        <li key={index}>{item}</li>
-        <button onClick>💢</button>
-        </div>
-        
-      ))}
-      
+        listado.map((item, index) => (
+          <div cl>
+            <li key={index}>{item}</li>
+            <button onClick>💢</button>
+          </div>
+
+        ))}
+
     </ul>
   );
 }
 
-export  function ListRemove() {
+export function ListRemove() {
   const [item, agregarItem] = useState(initialItems);
   const [inputValue, setInputValue] = useState(""); // Agrega estado para el valor del input
 

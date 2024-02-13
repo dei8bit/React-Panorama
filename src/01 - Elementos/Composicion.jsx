@@ -77,11 +77,11 @@ export default function ComponentePadre() {
 
 function Tarjeta(props) {
   return (
-      <div>
-          <h1>{props.titulo}</h1>
-          <p>{props.texto}</p>
-          {props.children}
-      </div>
+    <div>
+      <h1>{props.titulo}</h1>
+      <p>{props.texto}</p>
+      {props.children}
+    </div>
   );
 }
 
@@ -90,20 +90,20 @@ function Seccion(props) {
   const [nombre, setNombre] = React.useState('')
 
   const onChange = (e) => {
-      setNombre(e.target.value);
+    setNombre(e.target.value);
   }
   const onClick = () => {
-      alert('Bienvenido ' + nombre);
+    alert('Bienvenido ' + nombre);
   }
 
   return (
-      <Tarjeta titulo="Academia X"
-          texto="Empieza tu carrera en tecnología">
-          <input onChange={onChange} />
-          <button onClick={onClick}>
-              Quiero estudiar!
-          </button>
-      </Tarjeta>
+    <Tarjeta titulo="Academia X"
+      texto="Empieza tu carrera en tecnología">
+      <input onChange={onChange} />
+      <button onClick={onClick}>
+        Quiero estudiar!
+      </button>
+    </Tarjeta>
   );
 }
 

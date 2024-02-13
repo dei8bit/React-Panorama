@@ -8,9 +8,9 @@
 //. Paso de estado de padre a hijo:
 
 // export default function Padre() {
-  
+
 //   const info = "Informacion desde el Padre!";
-  
+
 //   return (
 //     <div>
 //       <h1>Componente padre:</h1>
@@ -65,38 +65,38 @@
 
 
 function NumeroInput(props) {
-  return (
-      <div>
-          <h1>{props.titulo}</h1>
-          <input value={props.value} onChange={props.onChange} />
-      </div>
-  );
+    return (
+        <div>
+            <h1>{props.titulo}</h1>
+            <input value={props.value} onChange={props.onChange} />
+        </div>
+    );
 }
 
 function Seccion(props) {
 
-  const [operacion, setOperacion] = React.useState('5%');
-  const [valor, setValor] = React.useState(0);
+    const [operacion, setOperacion] = React.useState('5%');
+    const [valor, setValor] = React.useState(0);
 
-  const onCinco = e => {
-      setOperacion('5%');
-      setValor(e.target.value);
-  }
-  const onQuince = e => {
-      setOperacion('15%');
-      setValor(e.target.value);
-  }
+    const onCinco = e => {
+        setOperacion('5%');
+        setValor(e.target.value);
+    }
+    const onQuince = e => {
+        setOperacion('15%');
+        setValor(e.target.value);
+    }
 
-  const cinco = operacion === '5%' ? valor : valor / 3;
-  const quince = operacion === '15%' ? valor : valor * 3;
+    const cinco = operacion === '5%' ? valor : valor / 3;
+    const quince = operacion === '15%' ? valor : valor * 3;
 
-  return (
-      <div>
-          <NumeroInput titulo="5%" value={cinco} onChange={onCinco} />
-          <NumeroInput titulo="15%" value={quince} onChange={onQuince} />
-          {
-              <p>Ultimo Input: {operacion}</p>
-          }
-      </div>
-  );
+    return (
+        <div>
+            <NumeroInput titulo="5%" value={cinco} onChange={onCinco} />
+            <NumeroInput titulo="15%" value={quince} onChange={onQuince} />
+            {
+                <p>Ultimo Input: {operacion}</p>
+            }
+        </div>
+    );
 }
